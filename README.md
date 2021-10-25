@@ -1,4 +1,4 @@
-# Flask text field to Handsonchart and dataframe
+# Flask text field to Handsontable and dataframe
 
 Figuring out how to receive data in text field and pass into a table and dataframe.
 
