@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask-Pandas</title>
+        <!--https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.6.0/tailwind.min.css-->
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://www.jqueryscript.net/demo/checkbox-switch-tailwind-css/jquery-tailwind-toggle.js"></script>
+
+</head>
+<body class="bg-blue-100 pb-8">
+  <a href="/"><h1 class="text-center text-2xl md:text-4xl lg:text-6xl text-blue-900 p-8">Flask Dataframer</h1></a>
+  <form action="/convert" method="POST">
+  <div class="shadow overflow-hidden rounded-md mx-10">
+      <div class="px-4 py-5 bg-white sm:p-6">
+          <div class="grid grid-cols-6 gap-6">
+
+              <div class="col-span-6">
+                  <p class="text-blue-900 mt-2 mb-5">Convert cells from a spreadsheet into a dataframe</p>
+                  
+                  
+                  <textarea class="border-2 border-gray-100 rounded p-4 w-full" rows="10" name="inputText" placeholder="Paste here"></textarea>
+                                </div>
+            </div>
+          
+          <div class="px-4 py-3 bg-white text-right sm:px-6">
+            <button type="reset" class="inline-flex
+                justify-center py-2 px-4 border
+                border-transparent shadow-sm text-sm font-medium
+                rounded-md text-white bg-red-600
+                hover:bg-red-700 focus:outline-none
+                focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Reset
+            </button>
+            <button type="submit" class="inline-flex
+                justify-center py-2 px-4 border
+                border-transparent shadow-sm text-sm font-medium
+                rounded-md text-white bg-blue-600
+                hover:bg-blue-700 focus:outline-none
+                focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Save
+            </button>
+               
+          </div>
+
+      </div>
+      
+
+    </form>
+
+    <script>
+      //https://css-tricks.com/snippets/javascript/javascript-keycodes/
+
+      document.querySelector("textarea").addEventListener('keydown',function(e) {
+          if(e.keyCode === 9) {
+              e.target.value += "\t"
+              e.preventDefault();
+          }
+      }, false);
+
+  </script>
+
+</body>
+</html>
